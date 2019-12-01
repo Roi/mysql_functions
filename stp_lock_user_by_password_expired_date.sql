@@ -1,4 +1,4 @@
-CREATE DEFINER=`root`@`localhost` PROCEDURE `lock_user_by_password_expired_date`()
+CREATE PROCEDURE `lock_user_by_password_expired_date`()
 BEGIN
 
 	/*************************************************************************** 
