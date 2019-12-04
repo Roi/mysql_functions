@@ -4,14 +4,21 @@
 * [License](#License)
 
 ## General info
-this is implemention of keepchars function for mysql
+* keepChars - implemention of keepchars function for mysql
+* lock_user_by_password_expired_date - lock mysql users based on password expiration
 
 ## Usage
-example of use :
+keepChars example :
 ```sql
-select keepchars('def(#)123??45!!67$abc$','abcdef123456');
+select keepchars('def(#)123??45!!67$abc$','abcdef123456'); 
+# will return def123456abc; 
 ```
-will return def123456abc;
+
+lock_user_by_password_expired_date example :
+```sql 
+call `db_name`.lock_user_by_password_expired_date();
+# will run and return ALTER USER 'roi_test'@'%' ACCOUNT LOCK;
+```
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
